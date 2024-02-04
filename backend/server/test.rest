@@ -66,3 +66,6 @@ Content-Type: application/json
         "zipCode": "01906"
     }
 }
+###
+GET http://localhost:8081/product/getAll
+Content-Type: application/json
