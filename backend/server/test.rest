@@ -50,3 +50,19 @@ Content-Type: application/json
 
 ###
 POST  http://localhost:8081/user/deleteAll
+
+### Create a Product
+POST http://localhost:8081/product/create
+Content-Type: application/json
+
+{
+    "User": "65b437f01955ff000b9a8059",
+    "Title": "Sample Product",
+    "Description": "This is a sample product description.",
+    "Category": "Electronics",
+    "Condition": "New",
+    "Price": 99.99,
+    "Location": {
+        "zipCode": "01906"
+    }
+}
