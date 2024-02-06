@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require('cors')
+const imagesRoute = require('./routes/images');
 const loginRoute = require('./routes/userLogin')
 const getAllUsersRoute = require('./routes/userGetAllUsers')
 const registerRoute = require('./routes/userSignUp')
@@ -29,6 +30,7 @@ app.use('/product', productCreate)
 app.use('/product', productGet)
 app.use('/product', productDelete)
 app.use('/product', productUpdate)
+app.use('/images', imagesRoute)
 
 app.listen(SERVER_PORT, (req, res) => {
     console.log(`The backend service is running on port ${SERVER_PORT} and waiting for requests.`);
