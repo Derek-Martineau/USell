@@ -78,3 +78,19 @@ Content-Type: application/json
 ###
 DELETE http://localhost:8081/product/DeleteOne/65c17b3d4397216e4478ae76
 Content-Type: application/json
+
+###
+PUT http://localhost:8081/product/updateProduct/65c1851ff006e6f378267b7c
+Content-Type: application/json
+
+{
+    "User": "65b437f01955ff000b9a8059",
+    "Title": "Updated Product",
+    "Description": "This is an updated product description.",
+    "Category": "Electronics",
+    "Condition": "Used(like-new)",
+    "Price": 60.00,
+    "Location": {
+        "zipCode": "01906"
+    }
+}
