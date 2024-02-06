@@ -74,3 +74,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8081/product/DeleteAll
 Content-Type: application/json
+
+###
+DELETE http://localhost:8081/product/DeleteOne/65c17b3d4397216e4478ae76
+Content-Type: application/json
