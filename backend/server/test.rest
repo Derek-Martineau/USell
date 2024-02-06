@@ -4,7 +4,8 @@ Content-Type: application/json
 {
     "username" : "tochiamanze",
     "email" : "cdon@gmail.com",
-    "password" : "tochi12345"
+    "password" : "tochi12345",
+    "isAdmin" : false
 }
 
 ###
@@ -68,4 +69,8 @@ Content-Type: application/json
 }
 ###
 GET http://localhost:8081/product/getAll
+Content-Type: application/json
+
+###
+POST http://localhost:8081/product/DeleteAll
 Content-Type: application/json
