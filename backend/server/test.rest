@@ -1,3 +1,6 @@
+### USERS
+###############################################################
+### Create a new user
 POST http://localhost:8080/user/signup
 Content-Type: application/json 
 
@@ -8,8 +11,7 @@ Content-Type: application/json
     "isAdmin" : false
 }
 
-###
-
+### Login
 POST http://localhost:8080/user/login
 Content-Type: application/json 
 
@@ -18,12 +20,11 @@ Content-Type: application/json
     "password" : "tochi12345"
 }
 
-###
+### Get all Users
 GET http://localhost:8081/user/getAll
 Content-Type: application/json
 
-###
-
+###Edit user
 POST http://localhost:8081/user/editUser
 Content-Type: application/json 
 
@@ -33,15 +34,7 @@ Content-Type: application/json
     "password" : "dwwrwr"
 }
 
-###
-GET  http://localhost:8081/user/getUserById
-Content-Type: application/json 
-
-{
-    "userId" : "635ab8dfc407faf9f73deaf1"
-}
-
-###
+### Get user by Id
 GET  http://localhost:8081/user/getUserById
 Content-Type: application/json 
 
@@ -49,8 +42,15 @@ Content-Type: application/json
     "userId" : "634edb2a16710b2cda6fb370"
 }
 
-###
+### Delete all users
 POST  http://localhost:8081/user/deleteAll
+
+### Make a user Admin
+PUT http://localhost:8081/admin/makeAdmin/65c408a2410bc8af95493fc0
+Content-Type: application/json
+
+### PRODUCTS
+###############################################################
 
 ### Create a Product
 POST http://localhost:8081/product/create
@@ -62,24 +62,27 @@ Content-Type: application/json
     "Description": "This is a sample product description.",
     "Category": "Electronics",
     "Condition": "New",
+    "Photos": {[
+        
+    ]}
     "Price": 99.99,
     "Location": {
         "zipCode": "01906"
     }
 }
-###
+### Get all products
 GET http://localhost:8081/product/getAll
 Content-Type: application/json
 
-###
+### Delete all products
 POST http://localhost:8081/product/DeleteAll
 Content-Type: application/json
 
-###
+### Delete product by Id
 DELETE http://localhost:8081/product/DeleteOne/65c17b3d4397216e4478ae76
 Content-Type: application/json
 
-###
+### Update a product by Id
 PUT http://localhost:8081/product/updateProduct/65c1851ff006e6f378267b7c
 Content-Type: application/json
 
@@ -94,7 +97,3 @@ Content-Type: application/json
         "zipCode": "01906"
     }
 }
-
-###
-PUT http://localhost:8081/admin/makeAdmin/65c036029ab2a88e28e97757
-Content-Type: application/json
