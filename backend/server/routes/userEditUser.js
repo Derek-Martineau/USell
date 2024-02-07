@@ -30,13 +30,14 @@ router.post('/editUser', async (req, res) =>
     newUserModel.findByIdAndUpdate(userId, {
         username : username, 
         email : email, 
-        password : hashPassword
+        password : hashPassword,
+        admin : isAdmin
     } ,function (err, user) {
     if (err){
         console.log(err);
     } else {
         // create and send new access token to local storage
-        const accessToken = generateAccessToken(user._id, email, username, hashPassword)  
+        const accessToken = generateAccessToken(user._id, email, username, hashPassword, admin)  
         res.header('Authorization', accessToken).send({ accessToken: accessToken })
     }
     });
