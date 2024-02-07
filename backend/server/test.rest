@@ -94,3 +94,7 @@ Content-Type: application/json
         "zipCode": "01906"
     }
 }
+
+###
+PUT http://localhost:8081/admin/makeAdmin/65c036029ab2a88e28e97757
+Content-Type: application/json
