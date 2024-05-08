@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Product = require('../models/productModel'); // Correct import statement
-const { productValidation } = require('../models/productValidator'); // Correct import statement
+const Product = require('../models/productModel'); 
+const { productValidation } = require('../models/productValidator'); 
 
 router.post('/create', async (req, res) => {
     // Validate the request body using the productValidation schema
