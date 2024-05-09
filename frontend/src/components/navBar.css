@@ -1,0 +1,23 @@
+.bar-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FFF;
+  }
+  
+  .search-form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .categories-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .categories-row > * {
+    margin-right: 10px;
+  }
